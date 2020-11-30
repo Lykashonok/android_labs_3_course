@@ -1,0 +1,43 @@
+import jdk.nashorn.internal.objects.Global
+
+def getPatch() {
+    def diffOutput = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'describe'
+        standardOutput = diffOutput
+    }
+    def res = diffOutput.toString()
+    if (res.contains('-')) {
+        return res.split('-')[1]
+    } else {
+        return '0'
+    }
+}
+
+def getLastTag() {
+    def tagsOutput = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'describe'
+        standardOutput = tagsOutput
+    }
+    def res = tagsOutput.toString()
+    if (res.contains('-')) {
+        return res.split('-').first()
+    } else {
+        return '0.0'
+    }
+}
+
+static def generateVersionCode(String tag, String patch) {
+    def dot = tag.indexOf('.')
+    def major = tag.substring(0, dot).toInteger()
+    def minor = tag.substring(dot + 1).toInteger()
+    def res = (major*10 + minor.toInteger())*100 + patch.toInteger()
+    return res
+}
+
+ext {
+    getPatch = this.&getPatch
+    getLastTag = this.&getLastTag
+    generateVersionCode = this.&generateVersionCode
+}
