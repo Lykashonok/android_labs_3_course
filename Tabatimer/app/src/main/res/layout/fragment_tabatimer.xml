@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.TabatimerFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/timer_set_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxHeight="100dp"
+            android:text="@string/start_question"
+            android:textSize="60sp"/>
+
+        <TextView
+            android:id="@+id/timer_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxHeight="100dp"
+            android:text="69"
+            android:textSize="60sp"/>
+
+        <LinearLayout
+            android:id="@+id/timer_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/timer_start_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_baseline_play_circle_outline_24" />
+
+            <Button
+                android:id="@+id/timer_skip_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/ic_baseline_arrow_drop_down_circle_24" />
+
+            <Button
+                android:id="@+id/timer_pause_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_baseline_pause_circle_outline_60"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="15dp"/>
+
+            <Button
+                android:id="@+id/timer_stop_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_baseline_stop_circle_60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_weight="6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/timer_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_in_set_row_view" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

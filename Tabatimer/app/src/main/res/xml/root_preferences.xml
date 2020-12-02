@@ -1,0 +1,46 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/settings_language_category" android:order="0">
+        <DropDownPreference
+            android:order="1"
+            app:defaultValue="English"
+            app:key="lang"
+            app:title="@string/settings_language_title"
+            app:summary="@string/settings_language_summary"
+            app:entries="@array/settings_language_entries"
+            app:entryValues="@array/settings_language_values"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/settings_font_category" android:order="2">
+        <SeekBarPreference
+            android:order="3"
+            app:showSeekBarValue="true"
+            app:key="font"
+            android:layout="@layout/setting_seek_layout"
+            app:summary="@string/settings_font_summary"
+            app:title="@string/settings_font_title"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/settings_theme_category" android:order="4">
+        <SwitchPreference
+            android:order="5"
+            app:key="theme"
+            app:title="@string/settings_theme_title"
+            app:summary="@string/settings_theme_summary"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/settings_datakill_category" android:order="6">
+        <Preference
+            android:order="7"
+            app:key="killdata"
+            app:title="@string/settings_datakill_title"
+            android:layout="@layout/setting_preference_layout"
+            app:summary="@string/settings_datakill_summary"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>
