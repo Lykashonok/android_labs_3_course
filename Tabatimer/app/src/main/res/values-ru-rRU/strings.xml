@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tabatimer</string>
+    <string name="hello_blank_fragment">Пустой фрагмент</string>
+    <string name="title_activity_settings">Настройки</string>
+    <string name="sync_header">Синхронизировать</string>
+    <string name="signature_title">Ваша подпись</string>
+    <string name="reply_title">Ответ по умолчанию</string>
+    <string name="sync_title">Синхронизировать периодически</string>
+    <string name="attachment_title">Загружать прикреплённые файлы</string>
+    <string name="settings_language_category">Локализация</string>
+    <string name="settings_language_title">Язык</string>
+    <string name="settings_language_summary">Язык для приложения</string>
+    <string name="settings_font_category">Шрифт</string>
+    <string name="settings_font_title">Размер шрифта</string>
+    <string name="settings_font_summary">Размер такого шрифта вы будете видеть</string>
+    <string name="settings_theme_category">Дизайн</string>
+    <string name="settings_theme_title">Ночная тема</string>
+    <string name="settings_theme_summary">Включить ночную тему для предотвращения повреждения глаз во время польозвания приложением</string>
+    <string name="settings_datakill_category">Данные</string>
+    <string name="settings_datakill_title">Очистить все данные</string>
+    <string name="settings_datakill_summary">Все сеты и упражения будут удалены навсегда</string>
+    <string name="settings_datakill_button">Очистить</string>
+    <string name="are_you_sure">Вы уверены?</string>
+    <string name="yes">Да</string>
+    <string name="start_question">Старт?</string>
+    <string name="set_list">Список сетов</string>
+    <string name="edit">Ок</string>
+    <string name="pick_color">Выбрать цвет</string>
+    <string name="name">Имя</string>
+    <string name="set_editing">Изменения сета</string>
+    <string name="item_list">Список упражнений</string>
+    <string name="duration_sec">Длительность (сек)</string>
+    <string name="messages_header">Сообщения</string>
+    <string name="cancel">cancel</string>
+    <string name="ok">ok</string>
+    <string name="choose_color">Choose color</string>
+    <string name="edited_successfully">Успешно изменено</string>
+    <string name="deleted_successfully">Успешно удалено</string>
+</resources>

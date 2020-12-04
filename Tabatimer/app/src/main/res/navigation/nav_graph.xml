@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tabataSetListFragment">
+
+    <fragment
+        android:id="@+id/tabataSetListFragment"
+        android:name="com.example.tabatimer.View.TabataSetListFragment"
+        android:label="fragment_tabata_set_list"
+        tools:layout="@layout/fragment_tabata_set_list" >
+        <action
+            android:id="@+id/action_tabataSetListFragment_to_tabataSetEditFragment"
+            app:destination="@id/tabataSetEditFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/tabataSetListFragment" />
+        <action
+            android:id="@+id/action_tabataSetListFragment_to_tabatimerFragment"
+            app:destination="@id/tabatimerFragment"
+            app:popUpTo="@id/tabataSetListFragment" />
+        <action
+            android:id="@+id/action_tabataSetListFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabataSetEditFragment"
+        android:name="com.example.tabatimer.View.TabataSetEditFragment"
+        android:label="fragment_tabata_set_edit"
+        tools:layout="@layout/fragment_tabata_set_edit" >
+        <action
+            android:id="@+id/action_tabataSetEditFragment_to_tabataItemListFragment"
+            app:destination="@id/tabataItemListFragment"
+            app:popUpTo="@id/tabataSetEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabataItemEditFragment"
+        android:name="com.example.tabatimer.View.TabataItemEditFragment"
+        android:label="fragment_tabata_item_edit"
+        tools:layout="@layout/fragment_tabata_item_edit" />
+    <fragment
+        android:id="@+id/tabataItemListFragment"
+        android:name="com.example.tabatimer.View.TabataItemListFragment"
+        android:label="fragment_tabata_item_list"
+        tools:layout="@layout/fragment_tabata_item_list" >
+        <action
+            android:id="@+id/action_tabataItemListFragment_to_tabataItemEditFragment"
+            app:destination="@id/tabataItemEditFragment"
+            app:popUpTo="@id/tabataItemListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabatimerFragment"
+        android:name="com.example.tabatimer.View.TabatimerFragment"
+        android:label="fragment_tabatimer"
+        tools:layout="@layout/fragment_tabatimer" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.tabatimer.View.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>

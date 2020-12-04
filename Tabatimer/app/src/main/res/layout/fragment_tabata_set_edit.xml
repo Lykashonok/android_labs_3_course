@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.TabataSetEditFragment"
+    android:tag="EditSet"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_set_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_editing"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/edit_set_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:text="" />
+
+            <Button
+                android:id="@+id/set_color_pick_dialog_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple_200"
+                android:ems="10"
+                android:text="@string/pick_color" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/set_edit_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                tools:listitem="@layout/set_edit_row_view" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/edit_set_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/edit"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="@color/purple_200"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/add_item_in_set_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/round_button"
+            android:backgroundTint="@color/purple_200"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
