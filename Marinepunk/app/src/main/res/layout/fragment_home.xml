@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".ui.game.HomeFragment">
+
+    <TableLayout
+        android:id="@+id/field"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+    <EditText
+        android:hint="@string/code"
+        android:id="@+id/createGameCodeInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/createGameCodeCreate"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:text="@string/create" />
+
+            <Button
+                android:id="@+id/createGameCodeConnect"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:text="@string/connect" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/createGameCodeGenerate"
+                android:textSize="11sp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:text="@string/generate" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/little_cell_size"
+                        android:layout_height="@dimen/little_cell_size"
+
+                        android:background="@drawable/cell_missed" />
+
+                    <TextView
+                        android:layout_width="@dimen/little_cell_size"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:background="@drawable/cell_missed" />
+
+                    <TextView
+                        android:layout_width="@dimen/little_cell_size"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:background="@drawable/cell_missed" />
+
+                    <TextView
+                        android:layout_width="@dimen/little_cell_size"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:background="@drawable/cell_missed" />
+
+                    <TextView
+                        android:id="@+id/rightShipsFour"
+                        android:layout_width="10dp"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:layout_marginStart="10dp"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/rightShipsThree"
+                        android:layout_width="10dp"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="2" />
+
+                    <TextView
+                        android:layout_width="@dimen/little_cell_size"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:background="@drawable/cell_missed" />
+
+                    <TextView
+                        android:layout_width="@dimen/little_cell_size"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:background="@drawable/cell_missed" />
+
+                    <TextView
+                        android:layout_width="@dimen/little_cell_size"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:background="@drawable/cell_missed" />
+
+                    <!-- empty view-->
+                    <TextView
+                        android:layout_width="@dimen/little_cell_size"
+                        android:layout_height="@dimen/little_cell_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/little_cell_size"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:background="@drawable/cell_missed" />
+
+                    <TextView
+                        android:layout_width="@dimen/little_cell_size"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:background="@drawable/cell_missed" />
+
+                    <TextView
+                        android:id="@+id/rightShipsTwo"
+                        android:layout_width="10dp"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:layout_marginStart="10dp"
+                        android:text="3" />
+
+                    <TextView
+                        android:id="@+id/rightShipsOne"
+                        android:layout_width="10dp"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="4" />
+
+                    <TextView
+                        android:layout_width="@dimen/little_cell_size"
+                        android:layout_height="@dimen/little_cell_size"
+                        android:background="@drawable/cell_missed" />
+                    <!-- empty view-->
+                    <TextView
+                        android:layout_width="@dimen/little_cell_size"
+                        android:layout_height="@dimen/little_cell_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/createGameCodeCopy"
+                android:textSize="12sp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:text="@string/copy" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/createQR"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:text="@string/show_qr_code" />
+            <Button
+                android:id="@+id/createQRConnect"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:text="@string/qr_connect" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
