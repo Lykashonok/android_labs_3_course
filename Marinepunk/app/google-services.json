@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "948690957193",
+    "firebase_url": "https://marinepunk-d7c84.firebaseio.com",
+    "project_id": "marinepunk-d7c84",
+    "storage_bucket": "marinepunk-d7c84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948690957193:android:3b5aac794c42cd4af42758",
+        "android_client_info": {
+          "package_name": "com.example.marinepunk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948690957193-mj1gm438vehms94a1q98gorl5l98h32s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0KHRr2s7BdnfEW_4LV6Y8pwMFxnmOtPc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948690957193-mj1gm438vehms94a1q98gorl5l98h32s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.marinepunk.ui.game.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_gallery"
+            app:destination="@id/nav_gallery" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.marinepunk.ui.game.GameFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_game" />
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.marinepunk.ui.login.LoginFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_nav_login_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.example.marinepunk.ui.game.AccountFragment"
+        android:label="@string/menu_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_nav_account_to_gameStatFragment"
+            app:destination="@id/gameStatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameStatFragment"
+        android:name="com.example.marinepunk.ui.game.GameStatFragment"
+        android:label="Game statistic" />
+</navigation>
